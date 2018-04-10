@@ -23,6 +23,7 @@ int main(int argc, const char * argv[])
           if([userInput isEqualToString:(@"quit")])
           {
               gameOn = false;
+              NSLog(@"%@", scoreKeeper.getScore);
               continue;
           }
           
@@ -32,13 +33,12 @@ int main(int argc, const char * argv[])
           {
               NSLog(@"RIGHT!");
               scoreKeeper.rightCount++;
-              NSLog(@"%@", scoreKeeper.getScore);
+      
           }
           else
           {
               NSLog(@"WRONG!");
               scoreKeeper.wrongCount++;
-              NSLog(@"%@", scoreKeeper.getScore);
           }
       }
     }
