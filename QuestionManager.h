@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  QuestionManager.h
 //  Maths
 //
 //  Created by Alejandro Zielinsky on 2018-04-10.
@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Question.h"
 
-@interface AdditionQuestion : Question
+@interface QuestionManager : NSObject
+
+@property NSMutableArray *questions;
+
+-(NSString*)timeOutput;
 
 @end

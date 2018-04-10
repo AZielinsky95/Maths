@@ -1,15 +1,14 @@
 //
-//  AdditionQuestion.m
+//  DivisionQuestion.m
 //  Maths
 //
 //  Created by Alejandro Zielinsky on 2018-04-10.
 //  Copyright © 2018 Alejandro Zielinsky. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "DivisionQuestion.h"
 
-
-@implementation AdditionQuestion 
+@implementation DivisionQuestion
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -20,10 +19,9 @@
 
 - (void)generateQuestion
 {
-    NSString *q = [NSString stringWithFormat:@"%ld + %ld",(long)super.leftValue,super.rightValue];
-
-    self.answer = super.leftValue + super.rightValue;
+    NSString *q = [NSString stringWithFormat:@"%ld / %ld",(long)super.leftValue,super.rightValue];
+    
+    self.answer = super.leftValue / super.rightValue;
     self.question = q;
 }
-
 @end
